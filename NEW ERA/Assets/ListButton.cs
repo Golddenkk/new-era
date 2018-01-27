@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Player : MonoBehaviour {
-	private int amountOfGold = 0;
-	List<Item> items;
+public class ListButton : MonoBehaviour {
+    public Button button;
+    public Text nameLabel;
+    public Text priceLabel;
+    public Image icon;
 	// Use this for initialization
 	void Start () {
-		items.Add (new Beer ());
-		items.Add (new Wood ());
-		items.Add (new Brick ());
+		
 	}
 	
 	// Update is called once per frame
