@@ -8,13 +8,24 @@ public class ListButton : MonoBehaviour {
     public Text nameLabel;
     public Text priceLabel;
     public Image icon;
+
+	private Item item;
+	private ShopScrollList scrollList;
+
 	// Use this for initialization
 	void Start () {
-		
+		button.onClick.AddListener(HandleClick);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void Setup(Item currentItem, ShopScrollList currentShopScrollList) {
+		item = currentItem;
+		nameLabel.text = item.name;
+		icon.sprite = item.icon;
+		priceLabel.text = item.price.ToString();
+		scrollList = currentShopScrollList;
+	}
+
+	public void HandleClick() {
+		scrollList.TryTransferToOther(item);
 	}
 }
