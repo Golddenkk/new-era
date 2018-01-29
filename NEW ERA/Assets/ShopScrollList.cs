@@ -25,7 +25,7 @@ public class ShopScrollList : MonoBehaviour {
 	}
 
     void RefreshDisplay() {
-        goldDisplay.text = $"Gold: {gold.ToString()}";
+        goldDisplay.text = "Gold: " + gold.ToString();
         RemoveButtons();
         AddButtons();
     }
@@ -65,7 +65,7 @@ public class ShopScrollList : MonoBehaviour {
     }
 
     private void RemoveItem(Item item, ShopScrollList shopList) {
-        for (int i = shopList.items.Count - 1; i >= 0, --i) {
+        for (int i = shopList.items.Count - 1; i >= 0; --i) {
             if (shopList.items[i] == item) {
                 shopList.items.RemoveAt(i);
             }
