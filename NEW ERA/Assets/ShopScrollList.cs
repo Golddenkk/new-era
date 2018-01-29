@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public struct Item
+public class Item
 {
     public string name;
     public Sprite icon;
